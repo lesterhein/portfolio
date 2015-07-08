@@ -428,3 +428,127 @@ th {
 
 /* end of normalize */
 
+body {
+  border:0;
+}
+
+
+nav {  
+  position: fixed;
+  margin-top: -2rem;
+  background-color: white;
+  width: 100%;
+  height:4rem;
+  font-weight: bold;
+}
+
+p{
+  font-size: 1em;
+}
+
+h1{
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 2rem;
+  text-shadow: 1px 1px #999;
+  color: white;
+}
+
+h2{
+  font-size: 2.5rem;
+  color:#darkgrey; 
+  padding-top: 0.5rem;
+}
+
+h3{
+  font-size: 2rem;
+  color:#darkgrey;
+  padding-top: 0.5rem;
+}
+
+
+
+nav  li,
+#follow li,
+#projects li{
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 1rem;
+}
+
+section,
+nav,
+footer{  
+  padding: 0 5rem;
+}
+
+
+#introduction{
+background-size: cover;
+background-position: top center;
+background-image: url('../images/introduction.jpeg');
+background-color: #lightgrey;
+width: 0 auto;
+height: 18rem;
+margin: 0;
+
+
+  -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black
+}
+
+#introduction >h3{
+
+  color: darkgrey;
+  text-align: center;
+}
+
+
+#about{
+
+}
+
+#projects{
+
+}
+
+#projects > ul{
+  list-style-type: none;
+  width: 100%;
+  margin-top: -3em;
+}
+
+#projects > ul > li{
+  margin: 3rem;
+ 
+  -webkit-box-shadow: 0 8px 6px -6px black;
+     -moz-box-shadow: 0 8px 6px -6px black;
+          box-shadow: 0 8px 6px -6px black;
+}
+
+#blog{
+
+}
+
+
+nav a,
+.blog a,
+#follow a{
+  text-decoration: none;
+  color: #333;
+}
+
+
+#follow{
+
+}
+
+footer{
+  margin: 5rem 0;
+  
+  text-align: center;
+  color: #999;
+  font-size:0.8rem;
+}
+
