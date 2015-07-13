@@ -7,9 +7,19 @@
  */
 
 html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-font-smoothing: antialiased;.
+
 }
 
 /**
@@ -435,36 +445,57 @@ body {
 
 nav {  
   position: fixed;
-  margin-top: -2rem;
+  margin-top: rem;
   background-color: white;
   width: 100%;
   height:4rem;
   font-weight: bold;
 }
 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+nav{
+  height: 8rem;
+  font-size:2rem;
+  text-align: center;
+
+}
+}
+
+
 p{
   font-size: 1em;
 }
 
+
+h1,
+h2,
+h3{
+font-family: 'Oswald', sans-serif;
+margin:0;
+}
+
+
+}
 h1{
-  text-align: center;
   font-size: 3rem;
-  padding-top: 2rem;
-  text-shadow: 1px 1px #999;
   color: white;
 }
 
 h2{
   font-size: 2.5rem;
-  color:#darkgrey; 
   padding-top: 0.5rem;
 }
 
 h3{
   font-size: 2rem;
-  color:#darkgrey;
   padding-top: 0.5rem;
 }
+
+
 
 
 
@@ -474,61 +505,168 @@ nav  li,
   display: inline-block;
   list-style-type: none;
   margin-right: 1rem;
+
 }
 
 section,
 nav,
 footer{  
-  padding: 0 5rem;
+  padding: 0 15rem 3rem 15rem;
 }
+
+
+
+/* makes the text display wider on mobile phones */ 
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+section, 
+nav,
+footer{
+padding: 0 2rem;
+
+}
+}
+
+ 
 
 
 #introduction{
 background-size: cover;
-background-position: top center;
+background-position: center;
 background-image: url('../images/introduction.jpeg');
 background-color: #lightgrey;
 width: 0 auto;
 height: 18rem;
 margin: 0;
-
-
   -webkit-box-shadow: 0 8px 6px -6px black;
      -moz-box-shadow: 0 8px 6px -6px black;
           box-shadow: 0 8px 6px -6px black
 }
 
+
+#introduction >h1{
+font-size: 4rem;
+color: #darkgrey;
+text-align: center;
+padding-top: 4rem;
+text-shadow: 1px 1px #999;
+
+
+}
+
+
+/* Fixes the size of the name heading */ 
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+#introduction >h1{
+    margin-top: 5rem;
+    padding-top: 7rem;
+    font-size: 5rem;
+    margin-bottom: -2rem;
+  }
+
+}
+
+
+
+
 #introduction >h3{
 
-  color: darkgrey;
+  color: white;
   text-align: center;
 }
 
 
 #about{
 
+background-color: #FFD99F;
+
 }
 
 #projects{
 
+  background-color: #CEEAFF
+
 }
 
-#projects > ul{
-  list-style-type: none;
+.images{
+width: 100%;
+overflow: hidden;
+
+}
+
+.images img{
+  width: 370px;
+  height: auto;
+}
+
+.one{
+  float:left;
+  width: auto;
+}
+
+.two{
+  float:right;
+  width: auto;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px){
+
+    .one{
+    float:none;
+    width: auto;
+    }
+
+    .two{
+    float:none;
+    width: auto;
+    }
+  
+  .images img{
   width: 100%;
-  margin-top: -3em;
+  }
+
+
 }
 
-#projects > ul > li{
-  margin: 3rem;
- 
-  -webkit-box-shadow: 0 8px 6px -6px black;
-     -moz-box-shadow: 0 8px 6px -6px black;
-          box-shadow: 0 8px 6px -6px black;
+
+@media only screen 
+  and (min-device-width: 568px) 
+  and (max-device-width: 1024px){
+
+    .one{
+    float:none;
+    width: auto;
+    }
+
+    .two{
+    float:none;
+    width: auto;
+    }
+  
+  .images img{
+  width: 100%;
+  }
+
+
 }
+
+
+
 
 #blog{
 
+background-color: #0090FF;
+clear: both;
 }
 
 
@@ -541,8 +679,19 @@ nav a,
 
 
 #follow{
-
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+  #follow{
+    font-size:3rem;
+    text-align: center;
+  }
+}
+
 
 footer{
   margin: 5rem 0;
@@ -551,4 +700,9 @@ footer{
   color: #999;
   font-size:0.8rem;
 }
+
+
+
+
+
 
